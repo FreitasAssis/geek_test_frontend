@@ -3,8 +3,8 @@
     <h1>Candidatos ({{ candidates.length }}):</h1>
     <h5>{{ filter }}</h5>
     <b-spinner variant="primary" label="Spinning" v-if="candidates.length === 0"></b-spinner>
-    <div class="row justify-content-center  candidates p-3" v-else>
-      <b-card class="m-2" v-for="candidate in candidates" :key="candidate.id" :title="candidate.id.toString()" :sub-title="candidate.city">
+    <div class="row justify-content-center p-3" v-else>
+      <b-card class="m-2 candidate" v-for="candidate in candidates" :key="candidate.id" :title="candidate.id.toString()" :sub-title="candidate.city">
         <b-card-text>
             <strong>Tempo de experiência:</strong> {{candidate.experience}}
         </b-card-text>
@@ -71,4 +71,6 @@ export default {
 }
 </script>
 <style lang="stylus">
+.candidate
+  box-shadow 0 2px 4px 0 rgba(0,0,0,0.2),0 2px 5px 0 rgba(0,0,0,0.19) !important
 </style>
