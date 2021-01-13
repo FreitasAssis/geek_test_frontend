@@ -48,10 +48,9 @@ export default {
         path = '/candidates.json'
         break;
     }
-    axios.get('http://192.168.99.100:3000' + path) 
+    axios.get('https://geekhunter-backend.herokuapp.com' + path) 
     .then(response => {
       this.candidates = response.data
-      console.log(response.data)
       switch (this.$route.params.filter) {
         case 'city':
           this.filter = 'Localização'

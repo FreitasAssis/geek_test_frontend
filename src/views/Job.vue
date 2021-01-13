@@ -38,7 +38,7 @@ export default {
     }
  },
   created() {
-    axios.get('http://192.168.99.100:3000/jobs.json') 
+    axios.get('https://geekhunter-backend.herokuapp.com/jobs.json') 
     .then(response => {
       this.jobs = response.data
     })
